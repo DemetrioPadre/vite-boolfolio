@@ -1,12 +1,11 @@
 <script>
-import axios from 'axios';
-import { api, store } from './store';
 import AppHeader from './components/AppHeader.vue';
+import ProjectList from './components/ProjectList.vue';
 
 export default {
   data() {
     return {
-      store,
+
       title: "BOOLFOLIO FRONTEND",
 
 
@@ -15,13 +14,9 @@ export default {
   },
 
   components: {
-    AppHeader
+    AppHeader, ProjectList
   },
-  created() {
-    axios.get(api.baserUrl + 'project').then((response) => {
-      store.projects = response.data.data;
-    });
-  }
+
 };
 </script>
 
@@ -30,19 +25,9 @@ export default {
 
 
   <div class="container mt-5">
-    <h1>{{ title }}</h1>
+    <project-list />
 
 
-    <div v-for="project in store.projects">
-      <ul>
-        <li><strong>ID:</strong>{{ project.id }}</li>
-        <li>
-          <strong>Title:</strong>{{ project.title }}
-        </li>
-        <li> <strong>Contenuto:</strong>{{ project.content }}
-        </li>
-      </ul>
-    </div>
   </div>
 
 
