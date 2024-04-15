@@ -1,6 +1,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import ProjectList from './components/ProjectList.vue';
+
 
 export default {
   data() {
@@ -14,7 +14,7 @@ export default {
   },
 
   components: {
-    AppHeader, ProjectList
+    AppHeader
   },
 
 };
@@ -25,7 +25,7 @@ export default {
 
 
   <div class="container mt-5 pb-5">
-    <project-list />
+    <router-view></router-view>
 
 
   </div>
