@@ -4,6 +4,9 @@ import ProjectList from "../components/ProjectList.vue";
 
 export default {
     data() {
+        return {
+            title: "Boolfolio"
+        };
 
     },
     components: { ProjectList }
@@ -14,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <h1>{{ title }}</h1>
+
 
     <project-list />
 
