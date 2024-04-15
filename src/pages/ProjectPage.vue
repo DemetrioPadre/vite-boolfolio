@@ -25,7 +25,7 @@ export default {
 
 <template>
     <div class="row">
-        <post-card :project="project" :isDetail="true" />
+        <project-card :project="project" :isDetail="true" />
     </div>
 
 
