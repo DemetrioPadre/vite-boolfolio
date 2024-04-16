@@ -24,7 +24,7 @@ export default {
                 <p class=" card-text">{{ project.id }}</p>
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ abstract }}</p>
-                <router-link v-if="!isDetail" :to="{ name: 'project.show', params: { slug: project.slug } }"
+                <router-link v-if="!isDetail" :to="{ name: 'project.show', params: { title: project.title } }"
                     class="btn btn-primary">Vedi
                     altro</router-link>
 

@@ -8,14 +8,15 @@ import ProjectCard from '../components/ProjectCard.vue';
 export default {
     data() {
         return {
+            title: "Il mio Progett",
             project: null
         };
     },
     components: { ProjectCard },
 
     created() {
-        const projectSlug = this.$route.params.slug;
-        axios.get(api.baserUrl + `project/${projectSlug}`).then((response) => {
+        const projectTitle = this.$route.params.title;
+        axios.get(api.baserUrl + `project/${projectTitle}`).then((response) => {
             this.project = response.data;
         });
     },
