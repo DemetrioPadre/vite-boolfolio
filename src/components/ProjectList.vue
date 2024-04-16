@@ -11,6 +11,7 @@ export default {
     },
     methods: {
         fetchProjects(endpoint = api.baserUrl + 'project') {
+            console.log("ciao", api.baserUrl);
             axios.get(endpoint).then((response) => {
                 store.projects = response.data.data;
                 this.pagination = response.data.links;
